@@ -1,0 +1,15 @@
+# Attach the NPCLife trait to every newly created NPC so its spawn location becomes
+# the wander centre. The trait is inert until you run: /npcx behavior enable
+auto-attach: true
+# Brains only run while a real player is within this many blocks (performance).
+active-range: 128
+# Hard upper cap for any NPC's wander radius (blocks).
+max-wander-radius: 100
+# Let INTERACT toggle doors/levers/buttons (restored afterwards). Chest lids are cosmetic only.
+modify-world: true
+# Return-to-spawn rule (applies to ALL NPCs, including ones that existed before the plugin was installed):
+# an NPC more than return-distance blocks from its spawn point waits return-wait-seconds, then walks back;
+# if it hasn't made it within return-timeout-seconds it is teleported. Per NPC: /npcx wander home <blocks|off|default>
+return-distance: 40
+return-wait-seconds: 20
+return-timeout-seconds: 120
